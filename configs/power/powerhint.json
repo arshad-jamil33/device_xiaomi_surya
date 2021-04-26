@@ -61,17 +61,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "GPUBusMinFreq",
-      "Path": "/sys/class/devfreq/soc:qcom,gpubw/min_freq",
-      "Values": [
-        "6881",
-        "5931",
-        "3879",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "GPUForceRailOn",
       "Path": "/sys/class/kgsl/kgsl-3d0/force_rail_on",
       "Values": [
@@ -131,7 +120,7 @@
       "Values": [
         "14236",
         "9155",
-        "2288"
+        "4577"
       ],
       "ResetOnInit": true
     },
@@ -355,12 +344,6 @@
       "Node": "GPUMaxFreq",
       "Duration": 0,
       "Value": "800000000"
-    },
-    {
-      "PowerHint": "ML_ACC",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 2000,
-      "Value": "44"
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
