@@ -352,6 +352,12 @@
       "Value": "800000000"
     },
     {
+      "PowerHint": "ML_ACC",
+      "Node": "PMQoSCpuDmaLatency",
+      "Duration": 2000,
+      "Value": "43"
+    },
+    {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
       "Node": "DoubleTapToWakeEnable",
       "Duration": 0,
