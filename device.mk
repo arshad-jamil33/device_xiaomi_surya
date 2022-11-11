@@ -307,6 +307,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
+# Properties
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/properties/build_surya.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya.prop \
+    $(LOCAL_PATH)/properties/build_karna.prop:$(TARGET_COPY_OUT_ODM)/etc/build_karna.prop
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/properties/build_surya.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya.prop \
+    $(LOCAL_PATH)/properties/build_karna.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_karna.prop
+
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat
+
 # QTI
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist.xml \
