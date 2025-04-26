@@ -283,4 +283,5 @@ zygote.critical_window.minute=10
 ro.product.property_source_order=odm,vendor,product,system_ext,system
 
 # USB
+ro.usb.uvc.disable_video_encode_flag=true
 ro.usb.uvc.enabled=true
