@@ -47,8 +47,22 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
-    'system_ext/lib64/libwfdnative.so': blob_fixup()
-        .add_needed('libinput_shim.so'),
+    'vendor/lib64/android.hardware.camera.provider@2.4-legacy.so': blob_fixup()
+        .add_needed('libcamera_provider_shim.so'),
+    'vendor/lib/hw/audio.primary.sm6150.so': blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
+    'vendor/lib64/camera/components/com.qti.node.watermark.so': blob_fixup()
+        .add_needed('libpiex_shim.so'),
+    'vendor/lib64/libalRnBRT_GL_GBWRAPPER.so': blob_fixup()
+        .add_needed('libui_shim.so'),
+    'vendor/lib64/camera/components/com.vidhance.node.eis.so': blob_fixup()
+        .replace_needed('libui.so', 'libui-v34.so'),
+    'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
+        .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
+    ('vendor/lib64/hw/camera.qcom.so', 'vendor/lib64/libFaceDetectpp-0.5.2.so', 'vendor/lib64/libfacedet.so'): blob_fixup()
+        .replace_needed('libmegface.so', 'libfacedet.so')
+        .replace_needed('libMegviiFacepp-0.5.2.so', 'libFaceDetectpp-0.5.2.so')
+        .replace_needed('megviifacepp_0_5_2_model', 'facedetectpp_0_5_2_model'),
     ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
     'vendor/etc/init/init.batterysecret.rc': blob_fixup()
