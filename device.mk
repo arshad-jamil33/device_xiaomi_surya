@@ -468,3 +468,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
