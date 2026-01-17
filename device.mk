@@ -470,3 +470,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
+
+# Miui-Camera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/surya-camera.mk)
