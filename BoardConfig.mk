@@ -171,7 +171,7 @@ SOONG_CONFIG_xiaomiSuryaVars_livedisplay_support_anti_flicker ?= false
 SOONG_CONFIG_xiaomiSuryaVars_livedisplay_support_sunlight_enhancement ?= true
 
 # Vendor security patch level
-VENDOR_SECURITY_PATCH := 2026-01-01
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
